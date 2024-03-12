@@ -1,0 +1,92 @@
+.add-product {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
+    margin: 10px auto;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.addproduct-itemfield {
+    margin-bottom: 10px;
+}
+
+.addproduct-itemfield p {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.addproduct-itemfield input,
+.add-product-selector {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.add-product-selector {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="#333" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 12l-5-5h10l-5 5z"/></svg>') no-repeat right 10px center/15px auto;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.addproduct-price {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.addproduct-thumnail-img {
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 10px 0;
+    border: 2px solid #fff;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.addproduct-thumnail-img:hover {
+    border-color: #ccc;
+}
+
+.addproduct-btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background: #6079ff;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.addproduct-btn:hover {
+    background: #4c63b6;
+}
+
+@media(max-width:800px) {
+    .add-product {
+        width: auto;
+        padding: 30px;
+        margin: 20px;
+    }
+}

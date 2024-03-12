@@ -1,0 +1,90 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(to right, #f06, #9f6);
+  /* Gradient background */
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow */
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.breadcrumb span,
+.breadcrumb a {
+  margin: 0 10px;
+}
+
+.breadcrumb img {
+  margin: 0 10px;
+  width: 24px;
+  height: 24px;
+  animation: bounce 0.5s infinite alternate;
+  /* Bouncing animation */
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-5px);
+    /* Bounce effect */
+  }
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.breadcrumb a:hover {
+  color: #ffeb3b;
+  /* Change color on hover */
+}
+
+.breadcrumb span:last-child,
+.breadcrumb a:last-child {
+  margin-right: 0;
+}
+
+.breadcrumb span:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  /* Add a hover box shadow */
+}
+
+@media(max-width:1280px) {
+  .breadcrumb {
+    margin: 30px 50px;
+    font-size: 14px;
+  }
+}
+
+@media(max-width:1024px) {
+  .breadcrumb {
+    margin: 30px 30px;
+    font-size: 13px;
+  }
+}
+
+@media(max-width:800px) {
+  .breadcrumb {
+    margin: 30px 10px;
+    font-size: 12px;
+  }
+}
+
+@media(max-width:500px) {
+  .breadcrumb {
+    font-size: 10px;
+  }
+
+  .breadcrumb span,
+  .breadcrumb a {
+    margin: auto;
+  }
+}

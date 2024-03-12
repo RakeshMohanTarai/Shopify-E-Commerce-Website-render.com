@@ -1,0 +1,142 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #e0f6e522;
+    color: #333;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-logo img {
+    max-width: 50px;
+    margin-right: 10px;
+  }
+  
+  .footer-logo p {
+    font-weight: bold;
+    font-size: 30px; /* Adjust the size as needed */
+    cursor: default;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 15px 0;
+  }
+  
+  .footer-links li {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .footer-social-icon {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .footer-icons-container {
+    background-color: #fff;
+    width: 40px; /* Set width to create a square */
+    height: 40px; /* Set height to create a square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border-radius: 8px; /* Added border-radius for rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-icons-container:hover {
+    background-color: #e1ffea;
+    transform: scale(1.1); /* Added slight scale effect on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added subtle box shadow on hover */
+  }
+  
+  .footer-icons-container img {
+    max-width: 25px; /* Adjusted icon size for better visibility */
+  }
+  
+  .footer-copyright {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .footer-copyright hr {
+    border: 1px solid #333;
+    margin: 10px 0;
+  }
+  
+  .footer-copyright p {
+    margin: 10px 0;
+  }
+  
+.shopify-text {
+  background: linear-gradient(to right, #FFC0CB, #FFFFFF);
+  background-clip: text; /* Safari/Chrome only */
+  color: rgb(249, 158, 173); /* Set a fallback color in case the gradient is not supported */
+  display: inline-block;
+}
+
+.footer-copyright hr {
+  border: 0; /* Remove default border */
+  height: 2px; /* Set the height of the new border */
+  background-image: linear-gradient(to right, pink,rgb(254, 138, 157), pink); /* Gradient background */
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+.footer-links li:hover {
+  color: #FFC0CB; /* Change text color on hover */
+  transform: scale(1.2);
+}
+
+.footer-icons-container:hover {
+  background-color: #e1ffea; /* Change background color on hover */
+  transform: scale(1.1); /* Scale effect on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+  cursor: pointer;
+}
+
+@media(max-width:800px) {
+  .footer {
+    gap: 20px;
+  }
+  .footer-logo {
+    gap: 10px;
+    align-items: end;
+  }
+  .footer-logo img {
+    width: 40px;
+  }
+  .footer-logo p {
+    font-size: 25px;
+  }
+  .footer-links {
+    font-size: 14px;
+    gap: 10px;
+  }
+  .footer-social-icon img {
+    width: 22px;
+  }
+  .footer-copyright {
+    font-size: 13px;
+  }
+}
+
+@media(max-width:500px) {
+  .footer {
+    margin-top: -10px;
+  }
+}
+
+@media(max-width:500px) {
+  .footer {
+    margin-top: 50px;
+  }
+}

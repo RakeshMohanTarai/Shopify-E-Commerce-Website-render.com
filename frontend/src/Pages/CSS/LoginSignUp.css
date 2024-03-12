@@ -1,0 +1,259 @@
+.loginsignup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(180deg, #fde1ff, #e1ffea22); */
+  background-image: url('../../Components/Assests/Nature.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.loginsignup-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+}
+
+.loginsignup h1 {
+  cursor: default;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #3498db, #5dade2, #348ed2, #123ecd, #1900ff);
+  background-clip: text;
+  color: transparent;
+  font-size: 32px;
+}
+
+.loginsignup-fields input {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  background-color: #f1f3f5;
+  color: #49574c;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.loginsignup-fields input:hover {
+  border-color: #007bff;
+}
+
+.loginsignup-fields input:focus {
+  outline: none;
+  border-color: none;
+}
+
+.loginsignup button {
+  background: linear-gradient(45deg, #3498db, #8e44ad);
+  color: #fff;
+  padding: 15px 20px;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.loginsignup button:hover {
+  background: linear-gradient(45deg, #2980b9, #9b59b6);
+  transform: scale(1.05);
+}
+
+.loginsignup-login {
+  margin-top: 20px;
+  color: #6c7d70;
+  font-size: 14px;
+}
+
+.loginsignup-login span {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.loginsignup-agree {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.loginsignup-agree p {
+  flex-grow: 1;
+}
+
+
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 32%;
+  right: 20px; /* Adjust as needed to position the eye icon */
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px; /* Adjust the width of the eye icon */
+  height: auto; /* Let the height adjust accordingly to maintain aspect ratio */
+}
+
+.position-fixing {
+  margin-right: 10px;
+  margin-top: -10px;
+  width: 20px;
+}
+
+.loginsignup-container button.generate-strong-password {
+  background: linear-gradient(135deg, #2980b9, #6dd5fa); /* Gradient background */
+  border: none;
+  color: #fff; /* Text color */
+  padding: 15px 30px; /* Padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px; /* Font size */
+  margin: 10px 0; /* Margin */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow */
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition */
+}
+
+.loginsignup-container button.generate-strong-password:hover {
+  background: linear-gradient(135deg, #1c7ed6, #4aa9e0); /* Darker gradient on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+@media(max-width: 1200px) {
+  .loginsignup-container {
+    width: 60%; /* Adjust the width as needed */
+  }
+
+  .login-container {
+    width: 40%
+  }
+
+  .loginsignup-fields input {
+    width: 93%; /* Adjust the input width as needed */
+  }
+
+  .loginsignup-container button {
+    width: 100%; /* Revert button width to default */
+  }
+  .loginsignup-agree p {
+    margin-left: -140px; /* Add margin to the left of the paragraph */
+  } 
+  #checkbox {
+    margin-left: 130px;
+  } 
+}
+
+@media(max-width: 800px) {
+  .loginsignup-container {
+    width: 60%; /* Adjust the width as needed */
+  }
+
+  .login-container {
+    width: 50%
+  }
+
+  .loginsignup-fields input {
+    width: 95%; /* Adjust the input width as needed */
+  }
+
+  .loginsignup-container button {
+    width: 100%; /* Make the button full width */
+  }
+  .loginsignup-agree p {
+    margin-left: 40px; /* Add margin to the left of the paragraph */
+  }  
+}
+
+@media(max-width:500px) {
+  .loginsignup {
+    height: 93vh;
+  }
+
+  .loginsignup-container {
+    padding: 20px; /* Added padding for a more balanced appearance */
+    width: 80%;
+    margin-bottom: 60px;
+  }
+
+  .loginsignup h1 {
+    font-size: 30px; /* Adjusted heading font size for better readability */
+  }
+
+  .loginsignup-fields input {
+    height: 15px; /* Adjusted input height for better visibility */
+    width: 90%;
+  }
+
+  .loginsignup-container button {
+    height: 45px; /* Adjusted button height for better usability */
+    font-size: 16px; /* Adjusted button font size for better readability */
+    padding: 0px 16px;
+  }
+
+  .loginsignup-login {
+    font-size: 15px; /* Adjusted font size for better readability */
+  }
+
+  .loginsignup-agree {
+    font-size: 12px; /* Adjusted font size for better readability */
+    display: inline-flex;
+  }  
+
+  #checkbox {
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-top: -16px;
+  }
+}
+
+
+@media(max-width:400px) {
+  .loginsignup {
+    height: 93vh;
+  }
+
+  .loginsignup-container {
+    padding: 20px; /* Added padding for a more balanced appearance */
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  .loginsignup h1 {
+    font-size: 20px; /* Adjusted heading font size for better readability */
+  }
+
+  .loginsignup-fields input {
+    height: 10px; /* Adjusted input height for better visibility */
+    width: 90%;
+  }
+
+  .loginsignup-container button {
+    height: 40px; /* Adjusted button height for better usability */
+    font-size: 14px; /* Adjusted button font size for better readability */
+    padding: 0px 12px;
+  }
+
+  .loginsignup-login {
+    font-size: 14px; /* Adjusted font size for better readability */
+  }
+
+  .loginsignup-agree {
+    font-size: 12px; /* Adjusted font size for better readability */
+    display: inline-flex;
+  }  
+  #checkbox {
+    margin-right: 10px;
+    margin-left: -5px;
+    margin-top: -15px;
+  }
+}
