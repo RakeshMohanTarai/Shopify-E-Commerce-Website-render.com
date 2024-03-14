@@ -8,40 +8,50 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ProductDisplay = (props) => {
-  // console.log("ProductDisplay component rendered.");
   const { addToCart } = useContext(ShopContext);
   const [loading, setLoading] = useState(true);
-  const [selectedSize, setSelectedSize] = useState(null); // State to store the selected size
+  const [selectedSize, setSelectedSize] = useState(null);
+  const authToken = localStorage.getItem('auth-token');
 
   useEffect(() => {
-    // Simulating data loading delay (replace this with actual data fetching logic)
     setTimeout(() => {
-      setLoading(false); // Once data is loaded, set loading to false
-    }, 2000); // Simulating 2 seconds delay
+      setLoading(false);
+    }, 2000);
   }, []);
 
-  // Function to handle size selection
   const handleSizeSelect = (size) => {
     setSelectedSize(size);
   };
 
-// Function to handle adding to cart
-const handleAddToCart = () => {
-  if (selectedSize) {
-    addToCart(props.product.id, selectedSize);
-  } else {
-    toast.warn('Please select a size before adding to cart.', {
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-  }
-};
-
+  const handleAddToCart = () => {
+    if (!authToken) {
+      // User is not logged in, prompt them to log in
+      toast.warn('Please login to use "Add to Cart".', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      // You can redirect the user to the login page here if needed
+    } else if (selectedSize) {
+      // User is logged in and has selected a size, add item to cart
+      addToCart(props.product.id, selectedSize);
+    } else {
+      // User is logged in but has not selected a size
+      toast.warn('Please select a size before adding to cart.', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  };
 
   if (loading) {
     return (
@@ -49,11 +59,11 @@ const handleAddToCart = () => {
         <div className="loading-spinner"></div>
         <div className="loading-text">Loading...</div>
       </div>
-    ); // Render loading indicator
+    );
   }
 
   if (!props.product) {
-    return null; // or you can render a loading spinner or an error message
+    return null;
   }
 
   return (
@@ -121,9 +131,7 @@ const handleAddToCart = () => {
             </div>
           </div>
         </div>
-        <button onClick={() => {
-          handleAddToCart();
-        }}>
+        <button onClick={handleAddToCart}>
           ADD TO CART
         </button>
         <ToastContainer style={{marginTop: "77.5px"}} />
