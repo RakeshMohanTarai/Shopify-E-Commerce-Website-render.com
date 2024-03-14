@@ -96,8 +96,8 @@ exports.signup = async (req, res) => {
             return res.status(400).json({ success: false, errors: "An account with this email already exists" });
         }
 
-        // Create an empty cart array with 300 elements
-        const cart = Array.from({ length: 300 }, () => ({ itemId: "", quantity: 0, selectedSize: "" }));
+        // Create an empty cart array with 1000 elements
+        const cart = Array.from({ length: 1000 }, () => ({ itemId: "", quantity: 0, selectedSize: "" }));
 
         // Create a new user instance
         const user = new Users({
