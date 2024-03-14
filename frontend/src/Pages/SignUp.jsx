@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './CSS/LoginSignUp.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ export const SignUp = () => {
     password: "",
     confirmPassword: "",
   });
+
+  const navigate = useNavigate();
 
   // const [passwordStrength, setPasswordStrength] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -114,7 +117,7 @@ export const SignUp = () => {
   
       if (responseData.success) {
         localStorage.setItem('auth-token', responseData.token);
-        window.location.replace("/login");
+        navigate('/login');
       } else {
         if (responseData.error === 'email_exists') {
           alert("An account with this email address already exists.");
