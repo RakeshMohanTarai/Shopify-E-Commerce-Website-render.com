@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
 import './Navbar.css';
 import cart_icon from '../Assests/cart_icon.png';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
 
 export const Navbar = () => {
   // Get the current location using the useLocation hook from react-router-dom
   const location = useLocation();
+  const navigate = useNavigate();
 
   // Load Menu State from localStorage when the Component Starts:
   // If there's nothing stored in localStorage for the 'menu' key, default to 'shop'.
@@ -59,6 +60,11 @@ export const Navbar = () => {
     }
   }, [location.pathname, menu]);
 
+  const handleLogout = () => {
+    localStorage.removeItem('auth-token');
+    navigate('/login');
+  } 
+
   return (
     <div className='navbar'>
       <div className='nav-logo'>
@@ -97,7 +103,7 @@ export const Navbar = () => {
       </ul>
       <div className='nav-login-cart'>
         {localStorage.getItem('auth-token')
-          ? <button onClick={() => { localStorage.removeItem('auth-token'); window.location.replace('/login') }}>Logout</button>
+          ? <button onClick={handleLogout}>Logout</button>
           : <Link to='/login' style={{ textDecoration: 'none' }}><button>Login</button></Link>
         }
         {/* Cart icon */}
