@@ -1,6 +1,6 @@
-🌟 **Welcome to Shopify**, your passport to the world of fashion wonders! 🌟
-
 ### Note :- Only after adding at least "Two" products using the Admin Panel will they become visible in the new collection, making it easier for customers to find them.
+
+🌟 **Welcome to Shopify**, your passport to the world of fashion wonders! 🌟
 
 _Ready to turn heads?_ 💁‍♂️ **_Visit our site at_ [Shopify](https://playful-treacle-26d6c0.netlify.app)**
 
