@@ -1,4 +1,4 @@
-### Note :- Only after adding at least "Two" products using the Admin Panel will they become visible in the new collection, making it easier for customers to find them.
+### Note :- Only after adding at least "Two" products using the Admin Panel than only the products will become visible in the new collection and making it easier for customers to find them.
 
 🌟 **Welcome to Shopify**, your passport to the world of fashion wonders! 🌟
 
